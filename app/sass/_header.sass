@@ -1,7 +1,17 @@
-body
-    background-color: white
-    font-size: 22px
-    color: green
-    font-family: Helvetica
+@import "variables"
+@import "mixins"
+
     
+header
+    position: relative
+    margin: auto
+    padding-top: 20px
     
+    ul 
+        @include flexbox
+        @include justify-content(space-around)
+        @include align-items(center)
+    
+  
+    
+        
