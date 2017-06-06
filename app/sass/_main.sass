@@ -1,0 +1,223 @@
+@import "mixins"
+@import "variables"
+
+body 
+    background-color: $white
+    font-family: $openSans
+    font-size: 18px
+    color: $greyDarkText
+    font-weight: normal
+    line-height: 160%
+    position: relative
+    
+h1
+    font-family: $openSans
+    font-size: 45px
+    font-weight: normal
+    line-height: 160%
+    position: relative
+
+a
+    text-decoration: none
+    color: $greyDarkText
+    
+.welcome
+    background: url("../img/main_photo_1500.jpg")
+    height: 700px
+    background-size: cover
+    background-repeat: no-repeat
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: -1
+    
+.mottoContainer
+    position: relative
+    height: 610px
+    width: 90%
+    margin: auto
+    z-index: 1
+    
+    
+    .text
+        position: absolute
+        width: 400px
+        z-index: 2
+        top: 35%
+        left: 0
+        
+        
+        .stomatology
+            color: $greenDark
+            font-family: $openSansBold
+            text-transform: uppercase
+            font-size: 40px
+            font-weight: bold
+            letter-spacing: 3pt
+            line-height: 120%
+        .nozhenko
+            color: $red
+            font-family: $openSansBold
+            text-transform: uppercase
+            font-size: 40px
+            font-weight: bold
+            letter-spacing: 3pt
+            line-height: 120%
+        h2
+            padding-top: 20px
+            font-size: 26px
+            font-family: $openSansSemiBold
+            line-height: 140%
+    
+h1.title
+    text-align: center
+    text-transform: uppercase
+    padding-top: 100px
+    padding-bottom: 50px
+    .titleGrey
+        color: $greyDarkText
+    .titleRed
+        color: $red
+
+.history
+    clear: both
+    position: relative
+    
+    .flexCont
+        @include flexbox
+        @include justify-content(space-around)
+        height: auto //set height
+        width: 100% 
+
+        .flexNav
+            width: 33%
+            background-color: $greyBg
+            ul
+                padding-left: 15%
+                margin-top: 15%
+                @include flexbox
+                @include flex-direction(column)
+                @include justify-content(space-between)
+                height: 80% //set height
+                a
+                    font-family: $robotoLight
+                    font-size: 17px
+                    line-height: 120%
+                    font-weight: bold
+                    color: $greyLightText
+                    text-align: left
+                    &:hover
+                        font-size: 19px
+                        color: $greenDark
+                        font-weight: bold
+
+        .flexText
+            width: 34%
+            padding-left: 5%
+            .titleHistoryNav
+                font-family: $roboto
+                font-size: 32px
+                line-height: 120%
+                color: $greyDarkText
+                text-align: left
+            .textContainer
+                font-family: $robotoLight
+                font-weight: bold
+                font-size: 20px
+                line-height: 160%
+                text-align: left
+                margin-top: 30px
+        .flexImg
+            width: 33%
+            padding-left: 5%
+            img
+                height: auto //set height
+                width: 100%
+ 
+                
+.services
+    clear: both
+    position: relative
+    
+    .flexCont
+        @include flexbox
+        @include justify-content(space-around)
+        height: auto //set height
+        width: 100%
+        
+        
+        .flexImg
+            width: 33%
+            img
+                height: auto //set height
+                width: 100%
+
+        .flexNav
+            width: 33%
+            background-color: $greyBg
+            ul
+                padding-left: 15%
+                margin-top: 15%
+                @include flexbox
+                @include flex-direction(column)
+                @include justify-content(space-between)
+                height: 80% //set height
+                a
+                    font-family: $robotoLight
+                    font-size: 17px
+                    line-height: 120%
+                    font-weight: bold
+                    color: $greyLightText
+                    text-align: left
+                    &:hover
+                        font-size: 19px
+                        color: $greenDark
+                        font-weight: bold
+
+        .flexText
+            width: 34%
+            padding-left: 5%
+            padding-right: 5%
+            .titleHistoryNav
+                font-family: $roboto
+                font-size: 32px
+                line-height: 120%
+                color: $greyDarkText
+                text-align: left
+            .textContainer
+                font-family: $robotoLight
+                font-weight: bold
+                font-size: 20px
+                line-height: 160%
+                text-align: left
+                margin-top: 30px
+        
+.team
+    .flexContTeam
+        @include flexbox
+        @include justify-content(space-around)
+        width: 100% 
+        .docPhoto
+            padding-left: 5%
+            width: 40%
+        .docTextCont
+            width: 60%
+            padding-right: 10%
+            .docTitle
+                font-family: $roboto
+                font-size: 32px
+                line-height: 120%
+                color: $greyDarkText
+                text-align: left
+            .docDescr
+                font-family: $robotoLight
+                font-weight: bold
+                font-size: 20px
+                line-height: 160%
+                text-align: left
+                margin-top: 30px
+    
+
+  

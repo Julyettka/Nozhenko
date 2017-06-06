@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     rename = require("gulp-rename");
 
 gulp.task('sass', function(){
-    return gulp.src("app/sass/main.sass")
+    return gulp.src("app/sass/styles.sass")
         .pipe(sass())
         .pipe(gulp.dest("app/css"))
         .pipe(browserSync.reload({stream: true}))
@@ -47,7 +47,7 @@ gulp.task('watch', ["browser-sync", "css-libs", "scripts"], function(){
 
 gulp.task("build", function(){
    var buildCss = gulp.src([
-       "app/css/main.css",
+       "app/css/styles.css",
        "app/css/libs.min.css",
    ])
    .pipe(gulp.dest("dist/css")); 
