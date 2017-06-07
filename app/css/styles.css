@@ -105,10 +105,45 @@ table {
   padding-bottom: 3px;
   padding-left: 6px; }
 
+.standart:before {
+  content: "\e142";
+  font-size: 44px;
+  color: #169f18;
+  padding-right: 48px;
+  padding-left: 6px; }
+
+.materials:before {
+  content: "\e146";
+  font-size: 46px;
+  color: #169f18;
+  padding-right: 50px;
+  padding-left: 6px; }
+
+.goblet:before {
+  content: "\e147";
+  font-size: 48px;
+  color: #169f18;
+  padding-right: 40px;
+  padding-left: 6px; }
+
+.price:before {
+  content: "\e153";
+  font-size: 45px;
+  color: #169f18;
+  padding-right: 40px;
+  font-weight: 500; }
+
+.pin:before {
+  content: "\e16b";
+  font-size: 48px;
+  color: #169f18;
+  padding-right: 54px;
+  padding-left: 6px; }
+
 body {
   background-color: white;
   font-family: "openSans", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 100%;
   color: #444444;
   font-weight: normal;
   line-height: 160%;
@@ -116,7 +151,6 @@ body {
 
 h1 {
   font-family: "openSans", Arial, Helvetica, sans-serif;
-  font-size: 45px;
   font-weight: normal;
   line-height: 160%;
   position: relative; }
@@ -126,7 +160,7 @@ a {
   color: #444444; }
 
 .welcome {
-  background: url("../img/main_photo_1500.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(237, 237, 237, 0.1) 43%, rgba(255, 255, 255, 0.4) 100%), url("../img/main_photo_1500.jpg");
   height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -175,11 +209,30 @@ h1.title {
   text-align: center;
   text-transform: uppercase;
   padding-top: 100px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  font-size: 45px; }
   h1.title .titleGrey {
     color: #444444; }
   h1.title .titleRed {
     color: #cc102c; }
+
+.textContainer {
+  font-family: "robotoLight", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 160%;
+  text-align: left;
+  margin-top: 30px; }
+
+.textContainer.hidden {
+  display: none; }
+
+.titleH2 {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: 120%;
+  color: #444444;
+  text-align: left; }
 
 .history {
   clear: both;
@@ -189,9 +242,10 @@ h1.title {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     height: auto;
     width: 100%; }
     .history .flexCont .flexNav {
@@ -211,10 +265,9 @@ h1.title {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         flex-direction: column;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
         height: 80%; }
         .history .flexCont .flexNav ul a {
           font-family: "robotoLight", Arial, Helvetica, sans-serif;
@@ -230,19 +283,6 @@ h1.title {
     .history .flexCont .flexText {
       width: 34%;
       padding-left: 5%; }
-      .history .flexCont .flexText .titleHistoryNav {
-        font-family: "roboto", Arial, Helvetica, sans-serif;
-        font-size: 32px;
-        line-height: 120%;
-        color: #444444;
-        text-align: left; }
-      .history .flexCont .flexText .textContainer {
-        font-family: "robotoLight", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 160%;
-        text-align: left;
-        margin-top: 30px; }
     .history .flexCont .flexImg {
       width: 33%;
       padding-left: 5%; }
@@ -305,19 +345,6 @@ h1.title {
       width: 34%;
       padding-left: 5%;
       padding-right: 5%; }
-      .services .flexCont .flexText .titleHistoryNav {
-        font-family: "roboto", Arial, Helvetica, sans-serif;
-        font-size: 32px;
-        line-height: 120%;
-        color: #444444;
-        text-align: left; }
-      .services .flexCont .flexText .textContainer {
-        font-family: "robotoLight", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 160%;
-        text-align: left;
-        margin-top: 30px; }
 
 .team .flexContTeam {
   display: -webkit-box;
@@ -334,19 +361,56 @@ h1.title {
   .team .flexContTeam .docTextCont {
     width: 60%;
     padding-right: 10%; }
-    .team .flexContTeam .docTextCont .docTitle {
-      font-family: "roboto", Arial, Helvetica, sans-serif;
-      font-size: 32px;
-      line-height: 120%;
-      color: #444444;
-      text-align: left; }
-    .team .flexContTeam .docTextCont .docDescr {
+
+.team .scroll {
+  height: 150px; }
+
+.advantages .flexCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: auto;
+  width: 100%; }
+  .advantages .flexCont .advList {
+    padding-left: 5%;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: vertical;
+    -moz-flex-direction: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 80%;
+    width: 50%; }
+    .advantages .flexCont .advList li {
+      position: relative;
+      margin-bottom: 4%;
       font-family: "robotoLight", Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 160%;
-      text-align: left;
-      margin-top: 30px; }
+      font-size: 2.7vmin;
+      line-height: 120%;
+      font-weight: bold; }
+  .advantages .flexCont .advImg {
+    width: 50%; }
+    .advantages .flexCont .advImg img {
+      height: auto;
+      width: 100%; }
+
+.certificate .certName {
+  border: 2px solid #f6f6f6; }
 
 header {
   position: relative;
@@ -366,4 +430,6 @@ header {
     -ms-grid-row-align: center;
     align-items: center; }
     header ul a {
-      line-height: 280%; }
+      line-height: 280%;
+      text-shadow: 5px 5px 10px #dddddd;
+      font-size: 18px; }

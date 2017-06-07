@@ -4,7 +4,7 @@
 body 
     background-color: $white
     font-family: $openSans
-    font-size: 18px
+    font-size: 100%
     color: $greyDarkText
     font-weight: normal
     line-height: 160%
@@ -12,7 +12,6 @@ body
     
 h1
     font-family: $openSans
-    font-size: 45px
     font-weight: normal
     line-height: 160%
     position: relative
@@ -22,7 +21,7 @@ a
     color: $greyDarkText
     
 .welcome
-    background: url("../img/main_photo_1500.jpg")
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(237,237,237,0.1) 43%, rgba(255, 255, 255, 0.4) 100%), url("../img/main_photo_1500.jpg")
     height: 700px
     background-size: cover
     background-repeat: no-repeat
@@ -76,18 +75,39 @@ h1.title
     text-transform: uppercase
     padding-top: 100px
     padding-bottom: 50px
+    font-size: 45px
     .titleGrey
         color: $greyDarkText
     .titleRed
         color: $red
 
+        
+.textContainer
+    font-family: $robotoLight
+    font-weight: bold
+    font-size: 20px
+    line-height: 160%
+    text-align: left
+    margin-top: 30px
+    
+.textContainer.hidden
+    display: none
+    
+.titleH2
+    font-family: $roboto
+    font-size: 32px
+    line-height: 120%
+    color: $greyDarkText
+    text-align: left
+    
+    
 .history
     clear: both
     position: relative
     
     .flexCont
         @include flexbox
-        @include justify-content(space-around)
+        @include justify-content(space-between)
         height: auto //set height
         width: 100% 
 
@@ -99,7 +119,7 @@ h1.title
                 margin-top: 15%
                 @include flexbox
                 @include flex-direction(column)
-                @include justify-content(space-between)
+                @include justify-content(space-around)
                 height: 80% //set height
                 a
                     font-family: $robotoLight
@@ -116,19 +136,8 @@ h1.title
         .flexText
             width: 34%
             padding-left: 5%
-            .titleHistoryNav
-                font-family: $roboto
-                font-size: 32px
-                line-height: 120%
-                color: $greyDarkText
-                text-align: left
-            .textContainer
-                font-family: $robotoLight
-                font-weight: bold
-                font-size: 20px
-                line-height: 160%
-                text-align: left
-                margin-top: 30px
+            
+            
         .flexImg
             width: 33%
             padding-left: 5%
@@ -180,19 +189,8 @@ h1.title
             width: 34%
             padding-left: 5%
             padding-right: 5%
-            .titleHistoryNav
-                font-family: $roboto
-                font-size: 32px
-                line-height: 120%
-                color: $greyDarkText
-                text-align: left
-            .textContainer
-                font-family: $robotoLight
-                font-weight: bold
-                font-size: 20px
-                line-height: 160%
-                text-align: left
-                margin-top: 30px
+
+            
         
 .team
     .flexContTeam
@@ -205,19 +203,45 @@ h1.title
         .docTextCont
             width: 60%
             padding-right: 10%
-            .docTitle
-                font-family: $roboto
-                font-size: 32px
-                line-height: 120%
-                color: $greyDarkText
-                text-align: left
-            .docDescr
+            
+    .scroll
+        height: 150px
+
+        
+.advantages
+    .flexCont
+        @include flexbox
+        @include justify-content(space-between)
+        height: auto //set height
+        width: 100%
+        .advList
+            padding-left: 5%
+            margin-top: 20px
+            @include flexbox
+            @include flex-direction(column)
+            @include justify-content(space-between)
+            height: 80%
+            width: 50%
+            li
+                position: relative
+                margin-bottom: 4%
                 font-family: $robotoLight
+                font-size: 2.7vmin
+                line-height: 120%
                 font-weight: bold
-                font-size: 20px
-                line-height: 160%
-                text-align: left
-                margin-top: 30px
+                
+            
+        .advImg
+            width: 50%
+            img
+                height: auto
+                width: 100%
+  
+.certificate
+    
+    .certName
+        border: 2px solid $greyBg
+        
     
 
-  
+
