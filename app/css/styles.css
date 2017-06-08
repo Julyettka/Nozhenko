@@ -106,18 +106,18 @@ table {
   padding-left: 6px; }
 
 .standart:before {
-  content: "\e142";
+  content: "\e6d4";
   font-size: 44px;
   color: #169f18;
   padding-right: 48px;
   padding-left: 6px; }
 
 .materials:before {
-  content: "\e146";
+  content: "\e930";
   font-size: 46px;
   color: #169f18;
-  padding-right: 50px;
-  padding-left: 6px; }
+  padding-right: 40px;
+  padding-left: 2px; }
 
 .goblet:before {
   content: "\e147";
@@ -226,6 +226,9 @@ h1.title {
 
 .textContainer.hidden {
   display: none; }
+
+.textContainer.active {
+  display: normal; }
 
 .titleH2 {
   font-family: "roboto", Arial, Helvetica, sans-serif;
@@ -410,7 +413,9 @@ h1.title {
       width: 100%; }
 
 .certificate .certName {
-  border: 2px solid #f6f6f6; }
+  background: url("../img/certificate.png");
+  width: 500px;
+  height: 200px; }
 
 header {
   position: relative;
