@@ -189,7 +189,7 @@ a {
     position: absolute;
     width: 400px;
     z-index: 2;
-    top: 35%; }
+    top: 20%; }
     .mottoContainer .text .stomatology {
       color: #008c00;
       font-family: "openSansBold", Arial, Helvetica, sans-serif;
@@ -281,10 +281,15 @@ h1.title {
         height: 80%; }
         .history .flexCont .flexNav ul a {
           font-family: "robotoLight", Arial, Helvetica, sans-serif;
-          font-size: 17px;
+          font-size: 18px;
           line-height: 120%;
           font-weight: bold;
           color: #aaaaaa;
+          -webkit-transition: color 1.5s ease;
+          -moz-transition: color 1.5s ease;
+          -ms-transition: color 1.5s ease;
+          -o-transition: color 1.5s ease;
+          transition: color 1.5s ease;
           text-align: left; }
           .history .flexCont .flexNav ul a:hover {
             font-size: 19px;
@@ -342,13 +347,18 @@ h1.title {
         height: 80%; }
         .services .flexCont .flexNav ul a {
           font-family: "robotoLight", Arial, Helvetica, sans-serif;
-          font-size: 17px;
+          font-size: 19px;
           line-height: 120%;
           font-weight: bold;
           color: #aaaaaa;
+          -webkit-transition: color 1.5s ease;
+          -moz-transition: color 1.5s ease;
+          -ms-transition: color 1.5s ease;
+          -o-transition: color 1.5s ease;
+          transition: color 1.5s ease;
           text-align: left; }
           .services .flexCont .flexNav ul a:hover {
-            font-size: 19px;
+            font-size: 20px;
             color: #008c00;
             font-weight: bold; }
     .services .flexCont .flexText {
@@ -419,10 +429,50 @@ h1.title {
       height: auto;
       width: 100%; }
 
-.certificate .certName {
-  background: url("../img/certificate.png");
+.wrapperCert1 {
+  margin-left: 6%;
+  display: inline-block; }
+
+.outer {
+  position: relative;
+  background: #f6f6f6;
   width: 500px;
   height: 200px; }
+  .outer span {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 30px 250px;
+    font-family: "robotoLight", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: bold; }
+  .outer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 40px; }
+  .outer .inner {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto 184px;
+    background: white;
+    width: 310px;
+    height: 186px; }
+    .outer .inner .triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 32px 0 32px 40px;
+      border-color: transparent transparent transparent #f6f6f6;
+      margin-top: 70px; }
 
 header {
   position: relative;
