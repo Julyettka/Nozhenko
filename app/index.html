@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="welcome">
+    <section class="welcome wrapper">
     </section>
     
-    <header>
+    <header class="wrapper">
         <ul>
             <li><a href="index.html" class="logo"><img src="/img/logo_ukr.png" alt="Ноженко"></a></li>
             <li><a href="#" class="lang">Ук<span class="icon arrowDown"></span></a></li>
@@ -22,37 +22,37 @@
 </object></a></li>
         </ul>
     </header>
-    <div class="mottoContainer">
+    <div class="mottoContainer wrapperThinner">
         <div class="text">
             <span class="stomatology">Стоматологія </span><span class="nozhenko">Ноженко</span>
         <h2>Вже чотири покоління<br> ми піклуємося<br> про Вашу посмішку</h2>
         </div>
     </div>
     
-    <section class="history">
+    <section class="history wrapper">
         <h1 class="title"><span class="titleGrey">Історія </span><span class="titleRed">династії Ноженко</span></h1>
         <div class="flexCont">
             <div class="flexNav"><ul>
-                <li><a id="item1" onClick="getText(this.id)">Ідея створення клініки</a></li>
-                <li><a id="item2" onClick="getText(this.id)">Покоління І: В.В. Ноженко</a></li>
-                <li><a id="item3" onClick="getText(this.id)">Покоління І: М.П. Ноженко</a></li>
-                <li><a id="item4" onClick="getText(this.id)">Покоління ІІ: В.В. Ноженко</a></li>
-                <li><a id="item5" onClick="getText(this.id)">Покоління ІІ: М.П. Ноженко</a></li>
-                <li><a id="item6" onClick="getText(this.id)">Покоління ІІІ: В.В. Ноженко</a></li>
-                <li><a id="item7" onClick="getText(this.id)">Покоління ІІІ: М.П. Ноженко</a></li>
-                <li><a id="item8" onClick="getText(this.id)">Покоління ІV: В.В. Ноженко</a></li>
-                <li><a id="item9" onClick="getText(this.id)">Покоління ІV: М.П. Ноженко</a></li>
+                <li><a id="item1" onClick="getText(this.id), changeText(this.id)">Ідея створення клініки</a></li>
+                <li><a id="item2" onClick="getText(this.id), changeText(this.id)">Покоління І: В.В. Ноженко</a></li>
+                <li><a id="item3" onClick="getText(this.id), changeText(this.id)">Покоління І: М.П. Ноженко</a></li>
+                <li><a id="item4" onClick="getText(this.id), changeText(this.id)">Покоління ІІ: В.В. Ноженко</a></li>
+                <li><a id="item5" onClick="getText(this.id), changeText(this.id)">Покоління ІІ: М.П. Ноженко</a></li>
+                <li><a id="item6" onClick="getText(this.id), changeText(this.id)">Покоління ІІІ: В.В. Ноженко</a></li>
+                <li><a id="item7" onClick="getText(this.id), changeText(this.id)">Покоління ІІІ: М.П. Ноженко</a></li>
+                <li><a id="item8" onClick="getText(this.id), changeText(this.id)">Покоління ІV: В.В. Ноженко</a></li>
+                <li><a id="item9" onClick="getText(this.id), changeText(this.id)">Покоління ІV: М.П. Ноженко</a></li>
             </ul></div>
             <div class="flexText">
-                <div id="titleHistoryNav" class="titleH2">test title</div>
-                <div class="textContainer active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam! Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</div>
-                <div class="textContainer hidden">Officia qui dolor mentitum ad quamquam minim ullamco. Minim o incurreret ea 
+                <div id="titleHistoryNav" class="titleH2">Ідея створення клініки</div>
+                <div id="textofitem1" class="textContainer active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam! Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</div>
+                <div id="textofitem2" class="textContainer hidden">Officia qui dolor mentitum ad quamquam minim ullamco. Minim o incurreret ea 
                     sunt. Velit mentitum id senserit ut incididunt quis malis ita nisi. Dolore 
                     laborum firmissimum qui an ullamco quo iudicem. Voluptate imitarentur ab 
                     officia. Fore cernantur ut reprehenderit iis doctrina elit voluptate commodo. 
                     Iis excepteur praetermissum do sed fugiat probant, ex o concursionibus de 
                     quamquam ubi esse.</div>
-                <div class="textContainer hidden">Cernantur quis incididunt do velit an quo quorum arbitror. Si est legam 
+                <div id="textofitem3" class="textContainer hidden">Cernantur quis incididunt do velit an quo quorum arbitror. Si est legam 
                     appellat, sint admodum pariatur. A ingeniis philosophari in sed aute offendit 
                     mandaremus, te nulla ipsum sed tempor a dolor est eiusmod de aute offendit 
                     eruditionem est aute senserit in exquisitaque, ubi elit velit duis doctrina do 
@@ -63,6 +63,24 @@
                     ab o cohaerescant non incididunt quis laborum laboris. Quo amet cernantur ea 
                     occaecat exquisitaque ita senserit iis admodum se senserit, in multos anim ex 
                     incurreret.</div>
+                    <div id="textofitem4" class="textContainer hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia omnis nobis numquam optio, iste reprehenderit. Laboriosam cupiditate soluta veritatis nostrum eveniet neque, animi quae, nobis fuga odit similique, vitae possimus.
+                    </div>
+                    <div id="textofitem5" class="textContainer hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero necessitatibus ab consequatur. Dicta nemo quos doloribus accusantium illo quas nulla ex dolore deleniti, voluptates blanditiis non, excepturi aliquam ab id numquam perspiciatis. Harum ad accusamus deleniti beatae qui! Quae omnis sunt magni voluptatum delectus eum non deleniti maxime aut ad.
+                    </div>
+                    <div id="textofitem6" class="textContainer hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                    </div>
+                     <div id="textofitem7" class="textContainer hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                    </div>
+                     <div id="textofitem8" class="textContainer hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                    </div>
+                     <div id="textofitem9" class="textContainer hidden">
+                        This is 9. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                    </div>
             </div>
             <div class="flexImg">           
                 <img src="/img/photo_old.jpg" alt="створення клініки Ноженко">
@@ -70,7 +88,7 @@
         </div>
     </section>
     
-    <section class="services">
+    <section class="services wrapper">
         <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">послуги</span></h1>
         <div class="flexCont">
             <div class="flexImg">           
@@ -93,7 +111,7 @@
         </div>
     </section>
    
-   <section class="team">
+   <section class="team wrapper">
        <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">спеціалісти</span></h1>
        <div class="flexContTeam">
            <div class="docPhoto">
@@ -107,7 +125,7 @@
        <div class="scroll"></div>
    </section>
    
-   <section class="advantages">
+   <section class="advantages wrapper">
        <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">переваги</span></h1>
        <div class="flexCont">
            <div class="advList">
@@ -124,7 +142,7 @@
        
    </section>
    
-   <section class="certificates">
+   <section class="certificates wrapper">
        <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">сертифікати</span></h1>
        <div class="certificate"><span class="certName">Ліцензія мінестерства</span></div>
    </section>
