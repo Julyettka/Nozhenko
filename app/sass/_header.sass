@@ -5,18 +5,30 @@
 header
     position: relative
     margin: auto
-    padding-top: 20px
+    padding-top: 10px
     
-    ul 
+    ul.upper 
         @include flexbox
         @include justify-content(space-around)
         @include align-items(center)
-        
-        
         a
             line-height: 280%
             text-shadow: 5px 5px 10px rgb(221,221,221)
             font-size: 18px
   
-
+    ul.lower
+        position: relative
+        bottom: 25px
+        right: 13%
+        @include flexbox
+        @include justify-content(flex-end)
+        @include align-items(flex-start)
+        li
+            margin: 0 30px
+            a
+                line-height: 280%
+                text-shadow: 5px 5px 10px rgb(221,221,221)
+                font-size: 18px
+                text-decoration: underline
+        
         

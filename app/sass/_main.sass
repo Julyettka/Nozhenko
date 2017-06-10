@@ -19,6 +19,9 @@ h1
 a
     text-decoration: none
     color: $greyDarkText
+    cursor: pointer
+    &:hover, &:focus
+        color: $greenDark
 
 .wrapper
     max-width: 1590px
@@ -76,6 +79,29 @@ a
             font-size: 26px
             font-family: $openSansSemiBold
             line-height: 140%
+            
+.button
+    height: 50px
+    margin: 50px 0
+    
+    a
+        background: $green
+        border-bottom: 5px solid $greenDark
+        padding: 15px 38px
+        font-family: $openSansBold;
+        font-size: 18px
+        color: $white
+        line-height: 160%
+        cursor: pointer
+        @include transition (0.2s ease)
+        &:hover, &:focus
+            background: $greenDark
+        &:active
+            @include box-shadow (0, 0, 0, rgba(0, 0, 0, 0.6), inset)
+            background: rgb(1, 112, 1)
+            border: solid 1px rgb(0, 86, 0)
+            border-bottom: 5px solid rgb(0, 86, 0)
+            
     
 h1.title
     text-align: center
@@ -137,9 +163,10 @@ h1.title
                     line-height: 120%
                     font-weight: bold
                     color: $greyLightText
-                    @include transition (color 1.5s ease)
+                    @include transition (color 1.2s ease)
                     text-align: left
-                    &:hover
+                    cursor: pointer
+                    &:hover, &:focus
                         font-size: 19px
                         color: $greenDark
                         font-weight: bold
@@ -190,12 +217,14 @@ h1.title
                     line-height: 120%
                     font-weight: bold
                     color: $greyLightText
-                    @include transition (color 1.5s ease)
+                    @include transition (color 1.2s ease)
                     text-align: left
-                    &:hover
+                    cursor: pointer
+                    &:hover, &:focus
                         font-size: 20px
                         color: $greenDark
                         font-weight: bold
+                        
 
         .flexText
             width: 34%
@@ -248,56 +277,69 @@ h1.title
             img
                 height: auto
                 width: 100%
-  
-.wrapperCert1
-    margin-left: 6%
-    display: inline-block
-    
-.outer
-    position: relative
-    background: $greyBg
-    width: 500px
-    height: 200px
-    
-    span
-        position: absolute
-        bottom: 0
-        top: 0
-        left: 0
-        right: 0
-        margin: 30px 250px
-        font-family: $robotoLight
-        font-size: 30px
-        line-height: 120%
-        font-weight: bold
+                
+.certificates
+    .flexCont
+        @include flexbox
+        @include flex-wrap(wrap)
+        @include justify-content(space-around)
+        height: auto //set height
+        width: 100%   
+    .outer
+        position: relative
+        background: $greyBg
+        width: 500px
+        height: 200px
+        display: inline-block
+        margin-bottom: 40px
 
-    
-    img
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        margin: auto 40px
-    
-    .inner
-        position: absolute
-        bottom: 0
-        top: 0
-        left: 0
-        right: 0
-        margin: auto 184px
-        background: $white
-        width: 310px
-        height: 186px
-        
-        .triangle
-            width: 0
-            height: 0
-            border-style: solid
-            border-width: 32px 0 32px 40px
-            border-color: transparent transparent transparent $greyBg
-            margin-top: 70px
+        .certName 
+            position: absolute
+            margin: 30px 250px
+            font-family: $robotoLight
+            font-size: 30px
+            line-height: 120%
+            font-weight: bold
+            .certDescr
+                position: absolute
+                bottom: -1
+                top: 1
+                left: 0
+                right: 0
+                padding-top: 50px
+                font-family: $robotoLight
+                font-size: 23px
+                line-height: 120%
+                font-weight: bold
+
+
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto 40px
+
+        .inner
+            position: absolute
+            bottom: 0
+            top: 0
+            left: 0
+            right: 0
+            margin: auto 184px
+            background: $white
+            width: 310px
+            height: 186px
+
+            .triangle
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 32px 0 32px 40px
+                border-color: transparent transparent transparent $greyBg
+                margin-top: 70px
             
         
         
