@@ -264,7 +264,10 @@ h1.title {
 .textContainer.hidden {
   display: none; }
 
-.textContainer.active {
+.textContainer.activeHistory {
+  display: normal; }
+
+.textContainer.activeService {
   display: normal; }
 
 .titleH2 {
@@ -315,17 +318,21 @@ h1.title {
           line-height: 120%;
           font-weight: bold;
           color: #aaaaaa;
-          -webkit-transition: color 1.2s ease;
-          -moz-transition: color 1.2s ease;
-          -ms-transition: color 1.2s ease;
-          -o-transition: color 1.2s ease;
-          transition: color 1.2s ease;
+          -webkit-transition: color 0.5s ease;
+          -moz-transition: color 0.5s ease;
+          -ms-transition: color 0.5s ease;
+          -o-transition: color 0.5s ease;
+          transition: color 0.5s ease;
           text-align: left;
           cursor: pointer; }
           .history .flexCont .flexNav ul a:hover, .history .flexCont .flexNav ul a:focus {
-            font-size: 19px;
-            color: #008c00;
+            font-size: 18px;
+            color: #444444;
             font-weight: bold; }
+        .history .flexCont .flexNav ul .chosen {
+          font-size: 18px;
+          color: #008c00;
+          font-weight: bold; }
     .history .flexCont .flexText {
       width: 34%;
       padding-left: 5%; }
@@ -382,17 +389,21 @@ h1.title {
           line-height: 120%;
           font-weight: bold;
           color: #aaaaaa;
-          -webkit-transition: color 1.2s ease;
-          -moz-transition: color 1.2s ease;
-          -ms-transition: color 1.2s ease;
-          -o-transition: color 1.2s ease;
-          transition: color 1.2s ease;
+          -webkit-transition: color 0.5s ease;
+          -moz-transition: color 0.5s ease;
+          -ms-transition: color 0.5s ease;
+          -o-transition: color 0.5s ease;
+          transition: color 0.5s ease;
           text-align: left;
           cursor: pointer; }
           .services .flexCont .flexNav ul a:hover, .services .flexCont .flexNav ul a:focus {
-            font-size: 20px;
-            color: #008c00;
+            font-size: 19px;
+            color: #444444;
             font-weight: bold; }
+        .services .flexCont .flexNav ul .chosenService {
+          font-size: 19px;
+          color: #008c00;
+          font-weight: bold; }
     .services .flexCont .flexText {
       width: 34%;
       padding-left: 5%;
@@ -413,9 +424,6 @@ h1.title {
   .team .flexContTeam .docTextCont {
     width: 60%;
     padding-right: 10%; }
-
-.team .scroll {
-  height: 150px; }
 
 .advantages .flexCont {
   display: -webkit-box;
@@ -524,6 +532,86 @@ h1.title {
       border-width: 32px 0 32px 40px;
       border-color: transparent transparent transparent #f6f6f6;
       margin-top: 70px; }
+
+.gallery .flexCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 100%; }
+  .gallery .flexCont .imgsScrollWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 30%;
+    margin: 5% 2% 0 5%; }
+    .gallery .flexCont .imgsScrollWrapper .imgsPrev {
+      min-width: 250px;
+      height: 350px;
+      overflow: scroll; }
+      .gallery .flexCont .imgsScrollWrapper .imgsPrev img {
+        cursor: pointer; }
+  .gallery .flexCont .activeWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 5% 0 0; }
+    .gallery .flexCont .activeWrapper .photoContainer {
+      width: 700px;
+      height: 450px;
+      overflow: hidden; }
+      .gallery .flexCont .activeWrapper .photoContainer .galleryContent {
+        width: 100%;
+        height: 450px;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        -ms-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+        transition: 0.5s ease; }
+    .gallery .flexCont .activeWrapper .buttonGallery {
+      position: relative;
+      top: 40%;
+      margin: 30px;
+      cursor: pointer;
+      -webkit-transition: 0.5s ease;
+      -moz-transition: 0.5s ease;
+      -ms-transition: 0.5s ease;
+      -o-transition: 0.5s ease;
+      transition: 0.5s ease; }
+    .gallery .flexCont .activeWrapper .buttonGallery.prev {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 35px 30px 0;
+      border-color: transparent #AAAAAA transparent transparent; }
+      .gallery .flexCont .activeWrapper .buttonGallery.prev:hover, .gallery .flexCont .activeWrapper .buttonGallery.prev:focus {
+        border-color: transparent #888888 transparent transparent; }
+    .gallery .flexCont .activeWrapper .buttonGallery.next {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 0 30px 35px;
+      border-color: transparent transparent transparent #AAAAAA; }
+      .gallery .flexCont .activeWrapper .buttonGallery.next:hover, .gallery .flexCont .activeWrapper .buttonGallery.next:focus {
+        border-color: transparent transparent transparent #888888; }
 
 header {
   position: relative;

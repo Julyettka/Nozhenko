@@ -39,20 +39,24 @@
     <section class="history wrapper">
         <h1 class="title"><span class="titleGrey">Історія </span><span class="titleRed">династії Ноженко</span></h1>
         <div class="flexCont">
-            <div class="flexNav"><ul>
-                <li><a id="item1" onClick="getText(this.id), changeText(this.id)">Ідея створення клініки</a></li>
-                <li><a id="item2" onClick="getText(this.id), changeText(this.id)">Покоління І: В.В. Ноженко</a></li>
-                <li><a id="item3" onClick="getText(this.id), changeText(this.id)">Покоління І: М.П. Ноженко</a></li>
-                <li><a id="item4" onClick="getText(this.id), changeText(this.id)">Покоління ІІ: В.В. Ноженко</a></li>
-                <li><a id="item5" onClick="getText(this.id), changeText(this.id)">Покоління ІІ: М.П. Ноженко</a></li>
-                <li><a id="item6" onClick="getText(this.id), changeText(this.id)">Покоління ІІІ: В.В. Ноженко</a></li>
-                <li><a id="item7" onClick="getText(this.id), changeText(this.id)">Покоління ІІІ: М.П. Ноженко</a></li>
-                <li><a id="item8" onClick="getText(this.id), changeText(this.id)">Покоління ІV: В.В. Ноженко</a></li>
-                <li><a id="item9" onClick="getText(this.id), changeText(this.id)">Покоління ІV: М.П. Ноженко</a></li>
-            </ul></div>
+            <div class="flexNav">
+              
+               <ul>
+                <li><a class="chosen" id="item1" onClick="changeH(this.id)">Ідея створення клініки</a></li>
+                <li><a id="item2" onClick="changeH(this.id)">Покоління І: В.В. Ноженко</a></li>
+                <li><a id="item3" onClick="changeH(this.id)">Покоління І: М.П. Ноженко</a></li>
+                <li><a id="item4" onClick="changeH(this.id)">Покоління ІІ: В.В. Ноженко</a></li>
+                <li><a id="item5" onClick="changeH(this.id)">Покоління ІІ: М.П. Ноженко</a></li>
+                <li><a id="item6" onClick="changeH(this.id)">Покоління ІІІ: В.В. Ноженко</a></li>
+                <li><a id="item7" onClick="changeH(this.id)">Покоління ІІІ: М.П. Ноженко</a></li>
+                <li><a id="item8" onClick="changeH(this.id)">Покоління ІV: В.В. Ноженко</a></li>
+                <li><a id="item9" onClick="changeH(this.id)">Покоління ІV: М.П. Ноженко</a></li>
+            </ul>
+            
+            </div>
             <div class="flexText">
                 <div id="titleHistoryNav" class="titleH2">Ідея створення клініки</div>
-                <div id="textofitem1" class="textContainer active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam! Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</div>
+                <div id="textofitem1" class="textContainer activeHistory">123/ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam! Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</div>
                 <div id="textofitem2" class="textContainer hidden">Officia qui dolor mentitum ad quamquam minim ullamco. Minim o incurreret ea 
                     sunt. Velit mentitum id senserit ut incididunt quis malis ita nisi. Dolore 
                     laborum firmissimum qui an ullamco quo iudicem. Voluptate imitarentur ab 
@@ -94,21 +98,40 @@
         <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">послуги</span></h1>
         <div class="flexCont">
             <div class="flexImg">           
-                <img src="/img/services_photo.jpg" alt="створення клініки Ноженко">
+                <img src="/img/services_photo.jpg" id="servicesPhoto" alt="створення клініки Ноженко">
             </div>
             <div class="flexText">
-                <div id="titleServicesNav" class="titleH2">test title</div>
-                <div id="textContainer" class="textContainer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!  </div>
+                <div id="titleServicesNav" class="titleH2">Діагностика</div>
+                <div id="textofservice1" class="textContainer activeService">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!  </div>
+                <div id="textofservice2" class="textContainer hidden">
+                    This is 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                    </div>
+                <div id="textofservice3" class="textContainer hidden">
+                    This is 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                </div>
+                <div id="textofservice4" class="textContainer hidden">
+                    This is 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                </div>
+                <div id="textofservice5" class="textContainer hidden">
+                    This is 5. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                </div>
+                <div id="textofservice6" class="textContainer hidden">
+                    This is 6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                </div>
+                <div id="textofservice7" class="textContainer hidden">
+                    This is 7. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iure iste minima sint hic reiciendis sed inventore vel repudiandae. Beatae iusto ducimus ullam mollitia hic tenetur aperiam sunt iure magni recusandae quasi deleniti ipsam, itaque praesentium temporibus fugiat at expedita perferendis ea rem cumque nostrum? Laudantium ad nesciunt sunt dignissimos.
+                </div>
+                
             </div>
             
             <div class="flexNav"><ul>
-                <li><a href="#">Діагностика</a></li>
-                <li><a href="#">Хірургія</a></li>
-                <li><a href="#">Дентікюр</a></li>
-                <li><a href="#">Лікування десен</a></li>
-                <li><a href="#">Реставрація зубів</a></li>
-                <li><a href="#">Лікування каналів</a></li>
-                <li><a href="#">Вирівнювання зубного ряду</a></li>
+                <li><a class="chosenService" id="service1" onClick="changeS(this.id)">Діагностика</a></li>
+                <li><a id="service2" onClick="changeS(this.id)">Хірургія</a></li>
+                <li><a id="service3" onClick="changeS(this.id)">Дентікюр</a></li>
+                <li><a id="service4" onClick="changeS(this.id)">Лікування десен</a></li>
+                <li><a id="service5" onClick="changeS(this.id)">Реставрація зубів</a></li>
+                <li><a id="service6" onClick="changeS(this.id)">Лікування каналів</a></li>
+                <li><a id="service7" onClick="changeS(this.id)">Вирівнювання зубного ряду</a></li>
             </ul></div>
         </div>
     </section>
@@ -160,7 +183,43 @@
    
    <section class="gallery wrapper">
        <h1 class="title"><span class="titleGrey">Наша </span><span class="titleRed">фотогалерея</span></h1>
+       <div class="flexCont">
+            <div class="imgsScrollWrapper">
+                <div class="imgsPrev">
+                    <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   <img src="/img/photo1_thumb.jpg">
+                   
+                   
+                </div>
+                
+            </div>
+            <div class="activeWrapper">
+               <span class="buttonGallery prev"></span>
+                    <div class="photoContainer">
+                        <div class="galleryContent">
+                            <img src="/img/large_photo1.jpg">
+                            <img src="/img/large_photo2.jpg">
+                            <img src="/img/large_photo3.jpg">
+                        </div>
+                    </div>
+                <span class="buttonGallery next"></span>
+            </div>
+        </div>
    </section>
+   
+   <section class="gallery wrapper">
+       <h1 class="title"><span class="titleGrey">Наша </span><span class="titleRed">фотогалерея</span></h1>
+    </section>
 
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
