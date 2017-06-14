@@ -56,8 +56,6 @@ a
         z-index: 2
         top: 20%
         
-        
-        
         .stomatology
             color: $greenDark
             font-family: $openSansBold
@@ -114,24 +112,6 @@ h1.title
     .titleRed
         color: $red
 
-        
-.textContainer
-    font-family: $robotoLight
-    font-weight: bold
-    font-size: 20px
-    line-height: 160%
-    text-align: left
-    margin-top: 30px
-    
-.textContainer.hidden
-    display: none
-    
-.textContainer.activeHistory
-    display: normal
-    
-.textContainer.activeService
-    display: normal
-
     
 .titleH2
     font-family: $roboto
@@ -140,124 +120,7 @@ h1.title
     color: $greyDarkText
     text-align: left
     
-    
-.history
-    clear: both
-    position: relative
-    
-    .flexCont
-        @include flexbox
-        @include justify-content(space-between)
-        height: auto //set height
-        width: 100% 
-
-        .flexNav
-            width: 33%
-            background-color: $greyBg
-            ul
-                padding-left: 15%
-                margin-top: 15%
-                @include flexbox
-                @include flex-direction(column)
-                @include justify-content(space-around)
-                height: 80% //set height
-                a
-                    font-family: $robotoLight
-                    font-size: 18px
-                    line-height: 120%
-                    font-weight: bold
-                    color: $greyLightText
-                    @include transition (color 0.5s ease)
-                    text-align: left
-                    cursor: pointer
-                    &:hover, &:focus
-                        font-size: 18px
-                        color: $greyDarkText
-                        font-weight: bold
-                .chosen
-                    font-size: 18px
-                    color: $greenDark
-                    font-weight: bold
-        .flexText
-            width: 34%
-            padding-left: 5%
-            
-            
-        .flexImg
-            width: 33%
-            padding-left: 5%
-            img
-                height: auto //set height
-                width: 100%
- 
-                
-.services
-    clear: both
-    position: relative
-    
-    .flexCont
-        @include flexbox
-        @include justify-content(space-around)
-        height: auto //set height
-        width: 100%
-        
-        
-        .flexImg
-            width: 33%
-            img
-                height: auto //set height
-                width: 100%
-
-        .flexNav
-            width: 33%
-            background-color: $greyBg
-            ul
-                padding-left: 15%
-                margin-top: 15%
-                @include flexbox
-                @include flex-direction(column)
-                @include justify-content(space-between)
-                height: 80% //set height
-                a
-                    font-family: $robotoLight
-                    font-size: 19px
-                    line-height: 120%
-                    font-weight: bold
-                    color: $greyLightText
-                    @include transition (color 0.5s ease)
-                    text-align: left
-                    cursor: pointer
-                    &:hover, &:focus
-                        font-size: 19px
-                        color: $greyDarkText
-                        font-weight: bold
-                .chosenService
-                    font-size: 19px
-                    color: $greenDark
-                    font-weight: bold
-                        
-
-        .flexText
-            width: 34%
-            padding-left: 5%
-            padding-right: 5%
-
-            
-        
-.team
-    .flexContTeam
-        @include flexbox
-        @include justify-content(space-around)
-        width: 100% 
-        .docPhoto
-            padding-left: 5%
-            width: 40%
-        .docTextCont
-            width: 60%
-            padding-right: 10%
-            
-    
-        
+                   
 .advantages
     .flexCont
         @include flexbox
@@ -321,8 +184,6 @@ h1.title
                 line-height: 120%
                 font-weight: bold
 
-
-
         img
             position: absolute
             top: 0
@@ -352,66 +213,8 @@ h1.title
             
 
 
-.gallery
-    .flexCont
-        @include flexbox
-        @include justify-content(space-around)
-        width: 100%
-        .imgsScrollWrapper
-            @include flexbox
-            @include justify-content(center)
-            width: 30%
-            margin: 5% 2% 0 5%
-            .imgsPrev
-                min-width: 250px
-                height: 350px
-                overflow: scroll
-                img
-                    cursor: pointer
-                       
-                       
-        .activeWrapper
-            @include flexbox
-            @include justify-content(space-around)
-            width: 70%
-            margin: 0 5% 0 0
-            
-            .photoContainer
-                width: 700px
-                height: 450px
-                overflow: hidden
-                .galleryContent
-                    width: 100%
-                    height: 450px
-                    align-items: center
-                    @include flexbox
-                    @include transition (0.5s ease)
-                    
-                
-            .buttonGallery
-                position: relative
-                top: 40%
-                margin: 30px
-                cursor: pointer
-                @include transition (0.5s ease)
-                
-            .buttonGallery.prev
-                width: 0
-                height: 0
-                border-style: solid
-                border-width: 30px 35px 30px 0
-                border-color: transparent #AAAAAA transparent transparent
-                &:hover, &:focus
-                    border-color: transparent #888888 transparent transparent
-                
-            .buttonGallery.next
-                width: 0
-                height: 0
-                border-style: solid
-                border-width: 30px 0 30px 35px
-                border-color: transparent transparent transparent #AAAAAA
-                &:hover, &:focus
-                    border-color: transparent transparent transparent #888888
+
+        
         
         
     

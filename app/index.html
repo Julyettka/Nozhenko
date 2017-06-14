@@ -38,7 +38,7 @@
     
     <section class="history wrapper">
         <h1 class="title"><span class="titleGrey">Історія </span><span class="titleRed">династії Ноженко</span></h1>
-        <div class="flexCont">
+        <div class="flexContLeft">
             <div class="flexNav">
               
                <ul>
@@ -96,7 +96,7 @@
     
     <section class="services wrapper">
         <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">послуги</span></h1>
-        <div class="flexCont">
+        <div class="flexContRight">
             <div class="flexImg">           
                 <img src="/img/services_photo.jpg" id="servicesPhoto" alt="створення клініки Ноженко">
             </div>
@@ -138,14 +138,23 @@
    
    <section class="team wrapper">
        <h1 class="title"><span class="titleGrey">Наші </span><span class="titleRed">спеціалісти</span></h1>
-       <div class="flexContTeam">
-           <div class="docPhoto">
-            <img src="/img/mpn.jpg">
+       <div class="flexContAround">
+          <span class="buttonGallery prev"></span>
+           <div class="activeWrapper">
+                    <div class="photoContainerDoc">
+                        <div class="galleryContent">
+                            <img src="/img/large_photo1.jpg">
+                            <img src="/img/large_photo2.jpg">
+                            <img src="/img/large_photo3.jpg">
+                        </div>
+                    </div>
+                
             </div>
            <div class="docTextCont">
                <div id="docTitle" class="titleH2">doc title</div>
                <div id="docDescr" class="textContainer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</div>
            </div>
+           <span class="buttonGallery next"></span>
        </div>
        <div class="scroll"></div>
    </section>
@@ -183,7 +192,7 @@
    
    <section class="gallery wrapper">
        <h1 class="title"><span class="titleGrey">Наша </span><span class="titleRed">фотогалерея</span></h1>
-       <div class="flexCont">
+       <div class="flexContAround">
             <div class="imgsScrollWrapper">
                 <div class="imgsPrev">
                     <img src="/img/photo1_thumb.jpg">
@@ -217,8 +226,52 @@
         </div>
    </section>
    
-   <section class="gallery wrapper">
-       <h1 class="title"><span class="titleGrey">Наша </span><span class="titleRed">фотогалерея</span></h1>
+   <section class="adress wrapper">
+       <h1 class="title"><span class="titleGrey">Приходьте до нас </span><span class="titleRed">по зручній адресі</span></h1>
+       <div class="flexContBetween">
+           <div class="adressSwitchers">
+               <div class="square current">
+                   <div class="adressTextWrapper">
+                       <a class="street">м. Київ, вул. Лисківська, 16 <span>дивитись на карті</span></a>
+                       <ul>
+                           <li><a class="phone" href="">044 229 30 30</a></li>
+                           <li><a class="phone" href="">095 535 30 30</a></li>
+                           <li><a class="phone" href="">093 535 30 30</a></li>
+                           <li><a class="phone" href="">096 535 30 30</a></li>
+                       </ul>
+                       <div class="schedule">
+                           Графік роботи <br/>
+                           Пн - Пт: 9<span>00</span> - 21<span>00</span>
+                       </div>
+                   </div>
+                </div>
+                
+                <div class="square nonactive">
+                   <div class="adressTextWrapper">
+                       <a class="street">м. Київ, вул. Лисківська, 16 <span>дивитись на карті</span></a>
+                       <ul>
+                           <li><a class="phone" href="">044 229 30 30</a></li>
+                           <li><a class="phone" href="">095 535 30 30</a></li>
+                           <li><a class="phone" href="">093 535 30 30</a></li>
+                           <li><a class="phone" href="">096 535 30 30</a></li>
+                       </ul>
+                       <div class="schedule">
+                           Графік роботи <br/>
+                           Пн - Пт: 9<span>00</span> - 21<span>00</span>
+                       </div>
+                   </div>
+                </div>
+               
+           </div>
+           
+           <div class="flexImg"><img src="/img/entrance.jpg" alt="адреса стоматології Ноженко"></div>
+       </div>
+    </section>
+    
+    <section class="map">
+       <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=17&center=50.5265%2C30.5980&key=AIzaSyBJFsXpdo2GuWRFj5vZZTLwEwfRbmb_PrI" allowfullscreen></iframe>
+       
+        
     </section>
 
 <script src="js/libs.min.js"></script>
