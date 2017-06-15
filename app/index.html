@@ -14,7 +14,7 @@
         <ul class="upper">
             <li><a href="index.html" class="logo"><img src="/img/logo_ukr.png" alt="Ноженко"></a></li>
             <li><a href="#" class="lang">Ук<span class="icon arrowDown"></span></a></li>
-            <li><a href="#" class="adress">Київ, вул. Лисківська, 16</a></li>
+            <li><a href="#" class="adress">Київ, вул. Лісківська, 16</a></li>
             <li><a href="#" class="adress">Київ, вул. П. Калнишевського, 1</a></li>
             
             <li><a href="#" class="burger"><object data="burger.svg" type="image/svg+xml">
@@ -24,7 +24,7 @@
         <ul class="lower">
         <li><a href="#">044 229 30 30</a></li>
         <li><a href="#">095 535 30 30</a></li>
-        <li><a href="#">095 535 30 30</a></li>
+        <li><a href="#">096 535 30 30</a></li>
         <li><a href="#">093 535 30 30</a></li>
         </ul>
     </header>
@@ -227,13 +227,13 @@
    </section>
    
    <section class="adress wrapper">
-       <h1 class="title"><span class="titleGrey">Приходьте до нас </span><span class="titleRed">по зручній адресі</span></h1>
+       <h1 class="title"><span class="titleGrey">Приходьте до нас </span><span class="titleRed">за адресою</span></h1>
        <div class="flexContBetween">
            <div class="adressSwitchers">
                <div class="square current">
                    <div class="adressTextWrapper">
-                       <a class="street">м. Київ, вул. Лисківська, 16 <span>дивитись на карті</span></a>
-                       <ul>
+                       <a class="street">м. Київ, вул. Лісківська, 16 <span>дивитись на карті</span></a>
+                       <ul class="phonesCont">
                            <li><a class="phone" href="">044 229 30 30</a></li>
                            <li><a class="phone" href="">095 535 30 30</a></li>
                            <li><a class="phone" href="">093 535 30 30</a></li>
@@ -248,8 +248,8 @@
                 
                 <div class="square nonactive">
                    <div class="adressTextWrapper">
-                       <a class="street">м. Київ, вул. Лисківська, 16 <span>дивитись на карті</span></a>
-                       <ul>
+                       <a class="street">м. Київ, вул. П. Калнишевського, 16 <span>дивитись на карті</span></a>
+                       <ul class="phonesCont">
                            <li><a class="phone" href="">044 229 30 30</a></li>
                            <li><a class="phone" href="">095 535 30 30</a></li>
                            <li><a class="phone" href="">093 535 30 30</a></li>
@@ -268,10 +268,13 @@
        </div>
     </section>
     
-    <section class="map">
-       <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=17&center=50.5265%2C30.5980&key=AIzaSyBJFsXpdo2GuWRFj5vZZTLwEwfRbmb_PrI" allowfullscreen></iframe>
+    <section class="map wrapper">
+      <div id="map"></div>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrZrghZVcRSHAaiu7EsVJ0JNFpsB8wrc&callback=initMap">
+    </script>
+      
        
-        
     </section>
 
 <script src="js/libs.min.js"></script>

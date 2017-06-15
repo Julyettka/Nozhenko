@@ -94,7 +94,7 @@ function changeS(id){
     }
 }
 
-//gallery
+/*gallery*/
 
 (function(){
     
@@ -129,22 +129,30 @@ function changeS(id){
     }
 })();
 
+/*map*/
 
-var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
-var mapOptions = {
-  zoom: 4,
-  center: myLatlng
-}
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+var map;
+      function initMap() {
+        var adress = {lat: 50.526469, lng: 30.598022};
+        var adress_2 = {lat: 50.521541, lng: 30.465336};
+          
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 50.523901, lng: 30.532542}, 
+          zoom: 13
+        });
+          
+        var marker = new google.maps.Marker({
+        position: adress,
+        map: map
+        });
+          var marker_2 = new google.maps.Marker({
+        position: adress_2,
+        map: map
+        });
+      }
+        
 
-var marker = new google.maps.Marker({
-    position: myLatlng,
-    title:"Hello World!"
-});
-
-// To add the marker to the map, call setMap();
-marker.setMap(map);   
-
+initMap();
 
 
 
