@@ -508,13 +508,10 @@ header {
   text-align: left;
   margin-top: 30px; }
 
-.textContainer.hidden {
+.textContainer.hiddenText {
   display: none; }
 
-.textContainer.activeHistory {
-  display: normal; }
-
-.textContainer.activeService {
+.textContainer.activeText {
   display: normal; }
 
 .flexContBetween {
