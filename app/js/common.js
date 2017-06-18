@@ -1,8 +1,8 @@
 
-function changeH(id){
+function changeHistory(id){
     const historySection = document.getElementById("history");
-    console.log(historySection);
     let historyChange = new TargetChange(id, "titleHistory", historySection);
+
     var imgId = document.getElementById("imgofitem");
     switch(id){
         case "item1":
@@ -33,10 +33,9 @@ function changeH(id){
             imgId.src="/img/photo_old9.jpg";
             break;
     }
-
 }
 
-function changeS(id){
+function changeService(id){
     const servicesSection = document.getElementById("services");
     let serviceChange = new TargetChange(id, "titleService", servicesSection);
 }
@@ -45,12 +44,11 @@ function changeS(id){
 class TargetChange{
     constructor(targetEl, classTitle, rootElement){ 
         this.rootElement = rootElement;
-        console.log(rootElement);
         this.targetEl = targetEl;
         this.classTitle = classTitle;
         this.changeTitle(targetEl, classTitle);
-        this.higlightActive(targetEl);
-        this.changeText(targetEl);
+        this.higlightActive(targetEl, rootElement);
+        this.changeText(targetEl, rootElement);
     }
     changeTitle(targetEl, classTitle){
         var chosenTitle = document.getElementById(targetEl).innerHTML;
@@ -60,18 +58,16 @@ class TargetChange{
     }
 
     higlightActive(targetEl, rootElement){
-        console.log(this.rootElement); //for some reason I should type this?
-        var lastChosen = this.rootElement.querySelector(".chosen");
+        var lastChosen = rootElement.querySelector(".chosen");
         lastChosen.classList.remove("chosen");
-        console.log(targetEl);
-        this.rootElement.querySelector("#"+targetEl).classList.add("chosen");
+        rootElement.querySelector("#"+targetEl).classList.add("chosen");
     }
 
     changeText(targetEl, rootElement){
         var textIdFormula = "textof" + targetEl;
-        var textId = this.rootElement.querySelector("#"+textIdFormula);
+        var textId = rootElement.querySelector("#"+textIdFormula);
         console.log(textId);
-        var lastActiveText = this.rootElement.querySelector(".activeText");
+        var lastActiveText = rootElement.querySelector(".activeText");
         lastActiveText.classList.remove("activeText");
         lastActiveText.classList.add("hiddenText");
         textId.classList.remove("hiddenText");
@@ -83,104 +79,6 @@ class TargetChange{
 //  история и сервисы не живут себе приспокойненько в одной среде
 
 
-
-
-// function changeH(id){
-//     var navId = document.getElementById(id);
-//     var lastChosen = document.querySelector(".chosen");
-//     lastChosen.classList.remove("chosen");
-//     navId.classList.add("chosen");
-    
-//     var item = document.getElementById(id).innerHTML;
-//     var title = document.getElementById("titleHistoryNav");
-//     title.innerHTML = "";
-//     title.innerHTML = item;
-    
-//     var textIdFormula = "textof" + id;
-//     var textId = document.getElementById(textIdFormula);
-//     var lastActive = document.querySelector(".activeHistory");
-    
-//     lastActive.classList.remove("activeHistory");
-//     lastActive.classList.add("hidden");
-//     textId.classList.remove("hidden");
-//     textId.classList.add("activeHistory");
-
-//     var imgId = document.getElementById("imgofitem");
-//     switch(id){
-//         case "item1":
-//             imgId.src="/img/photo_old.jpg";
-//             break;
-//         case "item2":
-//             imgId.src="/img/photo_old2.jpg";
-//             break;
-//         case "item3":
-//             imgId.src="/img/photo_old3.jpg";
-//             break;
-//         case "item4":
-//             imgId.src="/img/photo_old4.jpg";
-//             break;
-//         case "item5":
-//             imgId.src="/img/photo_old5.jpg";
-//             break;
-//         case "item6":
-//             imgId.src="/img/photo_old6.jpg";
-//             break;
-//         case "item7":
-//             imgId.src="/img/photo_old7.jpg";
-//             break;
-//         case "item8":
-//             imgId.src="/img/photo_old8.jpg";
-//             break;
-//         case "item9":
-//             imgId.src="/img/photo_old9.jpg";
-//             break;
-//     }
-// }
-
-
-// function changeS(id){
-//     var navId = document.getElementById(id);
-//     var lastChosen = document.querySelector(".chosenService");
-//     lastChosen.classList.remove("chosenService");
-//     navId.classList.add("chosenService");
-    
-//     var item = document.getElementById(id).innerHTML;
-//     var title = document.getElementById("titleServicesNav");
-//     title.innerHTML = "";
-//     title.innerHTML = item;
-    
-//     var textIdFormula = "textof" + id;
-//     var textId = document.getElementById(textIdFormula);
-//     var lastActive = document.querySelector(".activeService");
-//     lastActive.classList.remove("activeService");
-//     lastActive.classList.add("hidden");
-//     textId.classList.remove("hidden");
-//     textId.classList.add("activeService");
-//     var imgId = document.getElementById("servicesPhoto");
-//     switch(id){
-//         case "service1":
-//             imgId.src="/img/services_photo.jpg";
-//             break;
-//         case "service2":
-//             imgId.src="/img/photo_old2.jpg";
-//             break;
-//         case "service3":
-//             imgId.src="/img/photo_old3.jpg";
-//             break;
-//         case "service4":
-//             imgId.src="/img/photo_old4.jpg";
-//             break;
-//         case "service5":
-//             imgId.src="/img/photo_old5.jpg";
-//             break;
-//         case "service6":
-//             imgId.src="/img/photo_old6.jpg";
-//             break;
-//         case "service7":
-//             imgId.src="/img/photo_old7.jpg";
-//             break;
-//     }
-// }
 
 /*gallery*/
 
