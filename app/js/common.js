@@ -4,6 +4,8 @@ function changeHistory(id){
     let historyChange = new TargetChange(id, "titleHistory", historySection);
 
     var imgId = document.getElementById("imgofitem");
+    
+    
     switch(id){
         case "item1":
             imgId.src="/img/photo_old.jpg";
@@ -32,6 +34,17 @@ function changeHistory(id){
         case "item9":
             imgId.src="/img/photo_old9.jpg";
             break;
+    }
+    var photos = {
+        photo1: "imgId.src=\"\/img\/photo_old.jpg\"",
+        photo2: "imgId.src=\"\/img\/photo_old2.jpg\"",
+        photo3: "imgId.src=\"\/img\/photo_old3.jpg\"",
+        photo4: "imgId.src=\"\/img\/photo_old4.jpg\"",
+        photo5: "imgId.src=\"\/img\/photo_old5.jpg\"",
+        photo6: "imgId.src=\"\/img\/photo_old6.jpg\"",
+        photo7: "imgId.src=\"\/img\/photo_old7.jpg\"",
+        photo8: "imgId.src=\"\/img\/photo_old8.jpg\"",
+        photo9: "imgId.src=\"\/img\/photo_old9.jpg\""
     }
 }
 
