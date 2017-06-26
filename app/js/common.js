@@ -27,13 +27,14 @@ class TargetChange{
         titleField.innerHTML = "";
         titleField.innerHTML = chosenTitle;
     }
+    
 
     higlightActive(targetEl, rootElement){
         var lastChosen = rootElement.querySelector(".chosen");
         lastChosen.classList.remove("chosen");
         rootElement.querySelector("#"+targetEl).classList.add("chosen");
     }
-
+    
     changeText(targetEl, rootElement){
         var textIdFormula = "textof" + targetEl;
         var textId = rootElement.querySelector("#"+textIdFormula);
@@ -108,6 +109,7 @@ class TargetChange{
                 break;
         }
     }
+    
 }
 
 
@@ -115,34 +117,56 @@ class TargetChange{
 
 (function(){
     
-    var prevButton = document.getElementsByClassName("prev")[0];
-    var nextButton = document.getElementsByClassName("next")[0];
-    var photoContainer = document.getElementsByClassName("photoContainer")[0];
-    var galleryContent = document.getElementsByClassName("galleryContent")[0];
-    
-    var currentImgIndex = 0;
-    var imgTotalCount = galleryContent.children.length;
-
-    prevButton.addEventListener("click", function(){
-        currentImgIndex--;
-        selectImg(currentImgIndex);
-    });
-    nextButton.addEventListener("click", function(){
-        currentImgIndex++;
-        selectImg(currentImgIndex);
-    });
-
-     function selectImg(index) {
-        if (index < 0) {
-            currentImgIndex = imgTotalCount - 1;
-        } else if (index >= imgTotalCount) {
-            currentImgIndex = 0;
-        } else {
-            currentImgIndex = index;
+    class Gallery{
+        constructor(rootElement, options){
+            this.options = Object.assign({}, Gallery.defautOptions, options);
+            this.rootElement = rootElement;
+            this.nextBtn = this.rootElement.querySelector(this.options.nextButton);
+            this.prevBtn = this.rootElement.querySelector(this.options.prevButton); 
+            this.images = this.rootElement.querySelectorAll(this.options.imagesSelector);
+            this.imagesCount = this.images.length;
+            this.currentIndex = this.options.imageIndex;
+            this.content = this.rootElement.querySelector(this.options.contentSelector);
+            this.nextBtn.addEventListener('click', this.nextBtnHandler.bind(this));
+            this.prevBtn.addEventListener('click', this.prevBtnHandler.bind(this));
+            this.scrollTo(this.currentIndex);
         }
-
-        galleryContent.style.transform = 'translateX(-' + currentImgIndex + '00%)';
     }
+    Gallery.prototype.scrollTo = function (index) {
+        if (index < 0) {
+            index = this.imagesCount - 1;
+        } else if (index >= this.imagesCount) {
+            index = 0;
+        }
+        this.currentIndex = index;
+
+        this.content.style.transform = 'translateX(-' + this.currentIndex + '00%)';
+    };
+
+    Gallery.prototype.nextBtnHandler = function () {
+        this.currentIndex++;
+        this.scrollTo(this.currentIndex);
+    };
+
+    Gallery.prototype.prevBtnHandler = function () {
+        this.currentIndex--;
+        this.scrollTo(this.currentIndex);
+    };
+    
+    Gallery.defautOptions = {
+        prevButton:(".prev"),
+        nextButton:(".next"),
+        contentSelector:(".galleryContent"),
+        imagesSelector: ("img"),
+        imageIndex: 0
+    }
+    
+
+    const officeTargetId = document.getElementById("office");
+    let officeGallery = new Gallery(officeTargetId);
+    
+    const docsTargetId = document.getElementById("docsPhotos");
+    let docsGallery = new Gallery(docsTargetId);
 })();
 
 
