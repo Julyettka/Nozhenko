@@ -425,6 +425,8 @@ h1.title {
     border-style: none;
     border: 1px solid #cccccc;
     font-size: 20px; }
+  .form .flexForm submit {
+    border: none; }
   .form .flexForm select {
     width: 378px;
     height: 40px;
@@ -540,13 +542,16 @@ header {
   width: 100%; }
 
 .flexImg {
-  width: 33%; }
+  width: 33%;
+  height: 500px;
+  overflow: hidden; }
   .flexImg img {
     height: auto;
     width: 100%; }
 
 .flexNav {
   width: 33%;
+  height: 500px;
   background-color: #f6f6f6; }
   .flexNav ul {
     padding-left: 15%;
@@ -846,3 +851,27 @@ footer {
     line-height: 140%; }
     .contacts ul li a {
       color: white; }
+
+.developers {
+  width: 100%;
+  padding-top: 25px; }
+  .developers a {
+    position: relative;
+    width: 185px;
+    padding-left: 120px;
+    display: block;
+    margin: 0 auto;
+    font-family: "robotoLight", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 120%;
+    color: white; }
+    .developers a:before {
+      content: " ";
+      background-image: url("../img/soft_logo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 80px;
+      height: 50px;
+      position: absolute;
+      right: 183px;
+      top: -17px; }

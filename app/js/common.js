@@ -1,59 +1,15 @@
-
 function changeHistory(id){
     const historySection = document.getElementById("history");
     let historyChange = new TargetChange(id, "titleHistory", historySection);
-
-    var imgId = document.getElementById("imgofitem");
-    
-    
-    switch(id){
-        case "item1":
-            imgId.src="/img/photo_old.jpg";
-            break;
-        case "item2":
-            imgId.src="/img/photo_old2.jpg";
-            break;
-        case "item3":
-            imgId.src="/img/photo_old3.jpg";
-            break;
-        case "item4":
-            imgId.src="/img/photo_old4.jpg";
-            break;
-        case "item5":
-            imgId.src="/img/photo_old5.jpg";
-            break;
-        case "item6":
-            imgId.src="/img/photo_old6.jpg";
-            break;
-        case "item7":
-            imgId.src="/img/photo_old7.jpg";
-            break;
-        case "item8":
-            imgId.src="/img/photo_old8.jpg";
-            break;
-        case "item9":
-            imgId.src="/img/photo_old9.jpg";
-            break;
-    }
-    var photos = {
-        photo1: "/img/photo_old.jpg",
-        photo2: "/img/photo_old2.jpg",
-        photo3: "/img/photo_old3.jpg",
-        photo4: "/img/photo_old4.jpg",
-        photo5: "/img/photo_old5.jpg",
-        photo6: "/img/photo_old6.jpg",
-        photo7: "/img/photo_old7.jpg",
-        photo8: "/img/photo_old8.jpg",
-        photo9: "/img/photo_old9.jpg"
-    }
 }
 
 function changeService(id){
     const servicesSection = document.getElementById("services");
-    let serviceChange = new TargetChange(id, "titleService", servicesSection);
+    let serviceChange = new TargetChange(id, "titleService", servicesSection);  
 }
 
 
+/*class for changing elements*/
 class TargetChange{
     constructor(targetEl, classTitle, rootElement){ 
         this.rootElement = rootElement;
@@ -62,7 +18,9 @@ class TargetChange{
         this.changeTitle(targetEl, classTitle);
         this.higlightActive(targetEl, rootElement);
         this.changeText(targetEl, rootElement);
+        this.changePhoto(targetEl,rootElement);
     }
+    
     changeTitle(targetEl, classTitle){
         var chosenTitle = document.getElementById(targetEl).innerHTML;
         var titleField = document.getElementById(classTitle);
@@ -79,18 +37,78 @@ class TargetChange{
     changeText(targetEl, rootElement){
         var textIdFormula = "textof" + targetEl;
         var textId = rootElement.querySelector("#"+textIdFormula);
-        console.log(textId);
         var lastActiveText = rootElement.querySelector(".activeText");
         lastActiveText.classList.remove("activeText");
         lastActiveText.classList.add("hiddenText");
         textId.classList.remove("hiddenText");
         textId.classList.add("activeText");
     }
+    changePhoto(targetEl, rootElement){
+        var imgId = rootElement.querySelector("#imgofitem");
+        console.log(imgId);
+        var photos = {
+            photo1: "/img/photo_old.jpg",
+            photo2: "/img/photo_old2.jpg",
+            photo3: "/img/photo_old3.jpg",
+            photo4: "/img/photo_old4.jpg",
+            photo5: "/img/photo_old5.jpg",
+            photo6: "/img/photo_old6.jpg",
+            photo7: "/img/photo_old7.jpg",
+            photo8: "/img/photo_old8.jpg",
+            photo9: "/img/photo_old9.jpg"
+        }
+        switch(targetEl){
+            case "item1":
+                imgId.src = photos.photo1;
+                break;
+            case "item2":
+                imgId.src = photos.photo2;
+                break;
+            case "item3":
+                imgId.src = photos.photo3;
+                break;
+            case "item4":
+                imgId.src = photos.photo4;
+                break;
+            case "item5":
+                imgId.src = photos.photo5;
+                break;
+            case "item6":
+                imgId.src = photos.photo6;
+                break;
+            case "item7":
+                imgId.src = photos.photo7;
+                break;
+            case "item8":
+                imgId.src = photos.photo8;
+                break;
+            case "item9":
+                imgId.src = photos.photo9;
+                break;
+            case "service1":
+                imgId.src = photos.photo1;
+                break;
+            case "service2":
+                imgId.src = photos.photo2;
+                break;
+            case "service3":
+                imgId.src = photos.photo3;
+                break;
+            case "service4":
+                imgId.src = photos.photo4;
+                break;
+            case "service5":
+                imgId.src = photos.photo5;
+                break;
+            case "service6":
+                imgId.src = photos.photo6;
+                break;
+            case "service7":
+                imgId.src = photos.photo7;
+                break;
+        }
+    }
 }
-
-//заменила все document. на rootElement
-//  история и сервисы не живут себе приспокойненько в одной среде
-
 
 
 /*gallery*/

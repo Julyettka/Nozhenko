@@ -19,12 +19,15 @@
     
 .flexImg
     width: 33%
+    height: 500px
+    overflow: hidden
     img
-        height: auto //set height
+        height: auto 
         width: 100%
 
 .flexNav
     width: 33%
+    height: 500px
     background-color: $greyBg
     ul
         padding-left: 15%
@@ -32,7 +35,7 @@
         @include flexbox
         @include flex-direction(column)
         @include justify-content(space-around)
-        height: 80% //set height
+        height: 80% 
         a
             font-family: $robotoLight
             font-size: 18px
