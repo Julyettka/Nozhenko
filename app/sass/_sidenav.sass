@@ -75,78 +75,13 @@
     line-height: 160%
     text-align: left
     margin-top: 30px
-    
+    @include transition (0.5s ease)
 
 .textContainer.hiddenText
     display: none
+    transition: opacity 1s linear
     
 .textContainer.activeText
     display: normal
+    transition: opacity 1s linear
 
-
-    
-    
-//adress
-.flexContBetween
-    @include flexbox
-    @include justify-content(space-between)
-    width: 100%
-    height: 600px
-    .adressSwitchers
-        width: 40%
-        height: auto
-    .flexImg
-        width: 60%
-        height: auto
-        img
-            height: 600px
-
-      
-.square
-    height: 300px
-.adressTextWrapper
-    padding: 5% 5% 5% 10%
-    @include flexbox
-    @include flex-direction(column)
-    @include justify-content(space-between)
-    a.street
-        position: relative
-        font-family: $roboto
-        color: $white
-        font-size: 24px
-        line-height: 120%
-        margin-bottom: 2%
-        span
-            position: absolute
-            font-size: 16px
-            top: 120%
-            left: 60%
-            bottom: 0
-            right: 0
-
-      
-ul.phonesCont
-    margin-top: 10px
-    li
-        a.phone
-            font-family: $openSans
-            color: $white
-            font-size: 22px
-            line-height: 120%
-        
-.schedule
-    margin-top: 20px 
-    font-family: $roboto
-    font-size: 22px
-    line-height: 120%
-    color: $white
-    span
-        font-size: 14px
-        position: relative
-        bottom: 5px
-        
-.nonactive
-    background-color: $greyLightText
-            
-.current
-    background-color: $greenDark

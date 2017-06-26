@@ -43,6 +43,7 @@ class TargetChange{
         lastActiveText.classList.add("hiddenText");
         textId.classList.remove("hiddenText");
         textId.classList.add("activeText");
+        
     }
     changePhoto(targetEl, rootElement){
         var imgId = rootElement.querySelector("#imgofitem");
@@ -139,7 +140,6 @@ class TargetChange{
             index = 0;
         }
         this.currentIndex = index;
-
         this.content.style.transform = 'translateX(-' + this.currentIndex + '00%)';
     };
 
@@ -161,7 +161,6 @@ class TargetChange{
         imageIndex: 0
     }
     
-
     const officeTargetId = document.getElementById("office");
     let officeGallery = new Gallery(officeTargetId);
     
@@ -194,6 +193,21 @@ var map;
       }
         
 initMap();
+
+/*address buttons switch */
+    var currentButton = document.querySelector(".current");
+    var nonActiveButton = document.querySelector(".nonactive").addEventListener("click", addressSwitch);
+    function addressSwitch(currentButton, nonActiveButton){
+        currentButton.classList.toggle(nonActiveButton);
+        
+        
+//        var textId = rootElement.querySelector("#"+textIdFormula);
+//        var lastActiveText = rootElement.querySelector(".activeText");
+//        lastActiveText.classList.remove("activeText");
+//        lastActiveText.classList.add("hiddenText");
+//        textId.classList.remove("hiddenText");
+//        textId.classList.add("activeText");
+    }
 
 
 
