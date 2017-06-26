@@ -36,15 +36,15 @@ function changeHistory(id){
             break;
     }
     var photos = {
-        photo1: "imgId.src=\"\/img\/photo_old.jpg\"",
-        photo2: "imgId.src=\"\/img\/photo_old2.jpg\"",
-        photo3: "imgId.src=\"\/img\/photo_old3.jpg\"",
-        photo4: "imgId.src=\"\/img\/photo_old4.jpg\"",
-        photo5: "imgId.src=\"\/img\/photo_old5.jpg\"",
-        photo6: "imgId.src=\"\/img\/photo_old6.jpg\"",
-        photo7: "imgId.src=\"\/img\/photo_old7.jpg\"",
-        photo8: "imgId.src=\"\/img\/photo_old8.jpg\"",
-        photo9: "imgId.src=\"\/img\/photo_old9.jpg\""
+        photo1: "/img/photo_old.jpg",
+        photo2: "/img/photo_old2.jpg",
+        photo3: "/img/photo_old3.jpg",
+        photo4: "/img/photo_old4.jpg",
+        photo5: "/img/photo_old5.jpg",
+        photo6: "/img/photo_old6.jpg",
+        photo7: "/img/photo_old7.jpg",
+        photo8: "/img/photo_old8.jpg",
+        photo9: "/img/photo_old9.jpg"
     }
 }
 
@@ -102,7 +102,6 @@ class TargetChange{
     var photoContainer = document.getElementsByClassName("photoContainer")[0];
     var galleryContent = document.getElementsByClassName("galleryContent")[0];
     
-    
     var currentImgIndex = 0;
     var imgTotalCount = galleryContent.children.length;
 
@@ -152,7 +151,6 @@ var map;
         });
       }
         
-
 initMap();
 
 
