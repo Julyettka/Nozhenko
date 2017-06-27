@@ -208,7 +208,8 @@ a {
     position: absolute;
     width: 400px;
     z-index: 2;
-    top: 20%; }
+    top: 20%;
+    left: 0; }
     .mottoContainer .text .stomatology {
       color: #008c00;
       font-family: "openSansBold", Arial, Helvetica, sans-serif;
@@ -225,7 +226,7 @@ a {
       font-weight: bold;
       letter-spacing: 3pt;
       line-height: 120%; }
-    .mottoContainer .text h2 {
+    .mottoContainer .text .slogan {
       padding-top: 20px;
       font-size: 26px;
       font-family: "openSansSemiBold", Arial, Helvetica, sans-serif;
@@ -257,15 +258,15 @@ a {
       background: #017001;
       border-bottom: 5px solid #005600; }
 
-h1.title {
+.title {
   text-align: center;
   text-transform: uppercase;
   padding-top: 100px;
   padding-bottom: 50px;
   font-size: 45px; }
-  h1.title .titleGrey {
+  .title .titleGrey {
     color: #444444; }
-  h1.title .titleRed {
+  .title .titleRed {
     color: #cc102c; }
 
 .titleH2 {
@@ -375,13 +376,17 @@ h1.title {
     background: white;
     width: 310px;
     height: 186px; }
-    .certificates .outer .inner .triangle {
+    .certificates .outer .inner:after {
+      position: absolute;
+      content: " ";
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 32px 0 32px 40px;
       border-color: transparent transparent transparent #f6f6f6;
-      margin-top: 70px; }
+      left: 0;
+      top: 0;
+      margin-top: 60px; }
 
 .form {
   background-image: url("../img/form_bg.jpg");
@@ -467,11 +472,11 @@ h1.title {
 ::-moz-placeholder {
   color: #cccccc; }
 
-header {
+.header {
   position: relative;
   margin: auto;
   padding-top: 10px; }
-  header ul.upper {
+  .header .upper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -484,11 +489,11 @@ header {
     -ms-flex-align: center;
     -ms-grid-row-align: center;
     align-items: center; }
-    header ul.upper a {
+    .header .upper a {
       line-height: 280%;
       text-shadow: 5px 5px 10px #dddddd;
       font-size: 18px; }
-  header ul.lower {
+  .header ul.lower {
     position: relative;
     bottom: 25px;
     right: 13%;
@@ -505,9 +510,9 @@ header {
     -ms-flex-align: flex-start;
     -ms-grid-row-align: flex-start;
     align-items: flex-start; }
-    header ul.lower li {
+    .header ul.lower li {
       margin: 0 30px; }
-      header ul.lower li a {
+      .header ul.lower li a {
         line-height: 280%;
         text-shadow: 5px 5px 10px #dddddd;
         font-size: 18px;
@@ -819,14 +824,14 @@ ul.phonesCont {
     position: relative;
     bottom: 5px; }
 
-.nonactive {
+.non_active {
   background-color: #aaaaaa;
   -webkit-transition: 0.5s ease;
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease; }
-  .nonactive:hover {
+  .non_active:hover {
     background-color: #9d9d9d; }
 
 .current {
@@ -845,7 +850,7 @@ footer {
       width: 25%;
       color: white;
       margin-top: 50px; }
-      footer .wrapperThin .slogan h3, footer .wrapperThin .address h3, footer .wrapperThin .schedule h3, footer .wrapperThin .contacts h3 {
+      footer .wrapperThin .slogan .title_footer, footer .wrapperThin .address .title_footer, footer .wrapperThin .schedule .title_footer, footer .wrapperThin .contacts .title_footer {
         margin-bottom: 25px;
         font-family: "openSans", Arial, Helvetica, sans-serif;
         font-size: 20px;

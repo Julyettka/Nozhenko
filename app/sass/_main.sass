@@ -55,6 +55,7 @@ a
         width: 400px
         z-index: 2
         top: 20%
+        left: 0
         
         .stomatology
             color: $greenDark
@@ -72,7 +73,7 @@ a
             font-weight: bold
             letter-spacing: 3pt
             line-height: 120%
-        h2
+        .slogan
             padding-top: 20px
             font-size: 26px
             font-family: $openSansSemiBold
@@ -86,7 +87,7 @@ a
         background: $green
         border-bottom: 5px solid $greenDark
         padding: 15px 38px
-        font-family: $openSansBold;
+        font-family: $openSansBold
         font-size: 18px
         color: $white
         line-height: 160%
@@ -100,7 +101,7 @@ a
             border-bottom: 5px solid rgb(0, 86, 0)
             
     
-h1.title
+.title
     text-align: center
     text-transform: uppercase
     padding-top: 100px
@@ -201,14 +202,18 @@ h1.title
             background: $white
             width: 310px
             height: 186px
-
-            .triangle
+            &:after
+                position: absolute
+                content: " "
                 width: 0
                 height: 0
                 border-style: solid
                 border-width: 32px 0 32px 40px
                 border-color: transparent transparent transparent $greyBg
-                margin-top: 70px
+                left: 0
+                top: 0
+                margin-top: 60px
+                
             
 
 .form

@@ -195,10 +195,17 @@ var map;
 initMap();
 
 /*address buttons switch */
-    var currentButton = document.querySelector(".current");
-    var nonActiveButton = document.querySelector(".nonactive").addEventListener("click", addressSwitch);
-    function addressSwitch(currentButton, nonActiveButton){
-        currentButton.classList.toggle(nonActiveButton);
+    
+    var button2 = document.querySelector(".non_active").addEventListener("click", addressSwitch);
+
+    function addressSwitch(button2){
+        var button1 = document.querySelector(".current");
+        var button2 = document.querySelector(".non_active");
+        button2.classList.remove("non_active");
+        button2.classList.add("current");
+        button1.classList.remove("current");
+        button1.classList.add("non_active");
+        console.log(currentButton);
         
         
 //        var textId = rootElement.querySelector("#"+textIdFormula);
