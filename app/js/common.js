@@ -1,24 +1,27 @@
 function changeHistory(id){
     const historySection = document.getElementById("history");
-    let historyChange = new TargetChange(id, "titleHistory", historySection);
+    let photoPlaceholderId = document.getElementById("history_img");
+    let historyChange = new TargetChange(id, "titleHistory", historySection, photoPlaceholderId);
 }
 
 function changeService(id){
     const servicesSection = document.getElementById("services");
-    let serviceChange = new TargetChange(id, "titleService", servicesSection);  
+    let photoPlaceholderId = document.getElementById("service_img");
+    let serviceChange = new TargetChange(id, "titleService", servicesSection, photoPlaceholderId);  
 }
 
 
 /*class for changing elements*/
 class TargetChange{
-    constructor(targetEl, classTitle, rootElement){ 
+    constructor(targetEl, classTitle, rootElement, photoPlaceholderId){ 
         this.rootElement = rootElement;
         this.targetEl = targetEl;
         this.classTitle = classTitle;
+        this.photoPlaceholderId = photoPlaceholderId;
         this.changeTitle(targetEl, classTitle);
         this.higlightActive(targetEl, rootElement);
         this.changeText(targetEl, rootElement);
-        this.changePhoto(targetEl,rootElement);
+        this.changePhoto(targetEl,rootElement, photoPlaceholderId);
     }
     
     changeTitle(targetEl, classTitle){
@@ -45,9 +48,8 @@ class TargetChange{
         textId.classList.add("activeText");
         
     }
-    changePhoto(targetEl, rootElement){
-        var imgId = rootElement.querySelector("#imgofitem");
-        console.log(imgId);
+    changePhoto(targetEl, rootElement, photoPlaceholderId){
+        var imgId = photoPlaceholderId;
         var photos = {
             photo1: "/img/photo_old.jpg",
             photo2: "/img/photo_old2.jpg",

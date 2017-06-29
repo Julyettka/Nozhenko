@@ -258,15 +258,15 @@ a {
       background: #017001;
       border-bottom: 5px solid #005600; }
 
-.title {
+.screen_title {
   text-align: center;
   text-transform: uppercase;
   padding-top: 100px;
   padding-bottom: 50px;
   font-size: 45px; }
-  .title .titleGrey {
+  .screen_title .titleGrey {
     color: #444444; }
-  .title .titleRed {
+  .screen_title .titleRed {
     color: #cc102c; }
 
 .titleH2 {
